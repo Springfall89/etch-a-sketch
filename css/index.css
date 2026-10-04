@@ -3,3 +3,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+.grid-box
+{
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    color: #000000;
+}
