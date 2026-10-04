@@ -7,3 +7,5 @@ for (let i = 0; i < 256; i++)
 {
     gridBoxContainer.appendChild(gridBox.cloneNode(true));
 }
+
+const gridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *");
