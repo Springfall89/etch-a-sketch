@@ -1,7 +1,7 @@
 .grid-box-container
 {
     max-height: 85vh;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
