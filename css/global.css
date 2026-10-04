@@ -4,3 +4,7 @@ body
     background-color: #E32636;
     color: #FFD700;
 }
+p
+{
+    margin: 0;
+}
