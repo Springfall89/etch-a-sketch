@@ -9,3 +9,10 @@ for (let i = 0; i < 256; i++)
 }
 
 const gridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *");
+
+for (let i = 0; i < gridBoxContainerBoxes.length; i++)
+{
+    gridBoxContainerBoxes[i].addEventListener("mouseenter", () => {
+        gridBoxContainerBoxes[i].id = "active";
+    });
+}
