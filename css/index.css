@@ -1,5 +1,6 @@
 .grid-container
 {
+    max-height: 85vh;
     aspect-ratio: 3 / 2;
     display: flex;
     flex-wrap: wrap;
