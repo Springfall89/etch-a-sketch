@@ -18,6 +18,15 @@
     background-color: #ffffff;
     color: #000000;
 }
+.focus-out-text
+{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-align: center;
+}
 .active
 {
     background-color: #000000;
