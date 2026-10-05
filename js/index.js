@@ -20,6 +20,11 @@ focusOutText.textContent = "Click on the canvas to draw!";
 document.body.setAttribute("style", "padding-top: 0");
 document.body.insertBefore(focusOutText, etchASketch);
 
+function warnBeforeUnload(event)
+{
+    event.preventDefault();
+}
+
 for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 {
     let isDrawing = false;
@@ -43,6 +48,10 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
             return;
         }
         gridBoxContainerBoxes[i].classList.add("active");
+        if (document.querySelector(".active") !== null)
+        {
+            window.addEventListener("beforeunload", warnBeforeUnload);
+        }
     });
 
     gridBoxContainer.addEventListener("pointerdown", (event) => {
@@ -52,6 +61,10 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
         if (event.target.classList.contains("grid-box"))
         {
             event.target.classList.add("active");
+        }
+        if (document.querySelector(".active") !== null)
+        {
+            window.addEventListener("beforeunload", warnBeforeUnload);
         }
     });
 
@@ -66,6 +79,10 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
         if (currentBox && currentBox.classList.contains("grid-box"))
         {
             currentBox.classList.add("active");
+        }
+        if (document.querySelector(".active") !== null)
+        {
+            window.addEventListener("beforeunload", warnBeforeUnload);
         }
     });
 }
