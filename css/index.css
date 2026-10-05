@@ -13,8 +13,9 @@
 }
 .grid-box
 {
+    aspect-ratio: 1 / 1;
     width: 6.25%;
-    height: 6.25%;
+    height: auto;
     background-color: #ffffff;
     color: #000000;
 }
