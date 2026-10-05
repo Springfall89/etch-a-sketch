@@ -28,7 +28,6 @@ function warnBeforeUnload(event)
 for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 {
     let isDrawing = false;
-
     gridBoxContainer.addEventListener("focusin", () => {
         isDrawing = true;
         focusOutText.remove();
@@ -40,6 +39,14 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 
         document.body.setAttribute("style", "padding-top: 0");
         document.body.insertBefore(focusOutText, etchASketch);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!gridBoxContainer.contains(event.target))
+        {
+        document.body.setAttribute("style", "padding-top: 0");
+        document.body.insertBefore(focusOutText, etchASketch);
+        }
     });
 
     gridBoxContainerBoxes[i].addEventListener("pointerenter", () => {
@@ -56,6 +63,10 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 
     gridBoxContainer.addEventListener("pointerdown", (event) => {
         isDrawing = true;
+
+        focusOutText.remove();
+        document.body.setAttribute("style", "padding-top: 50px");
+
         gridBoxContainer.setPointerCapture(event.pointerId);
         
         if (event.target.classList.contains("grid-box"))
