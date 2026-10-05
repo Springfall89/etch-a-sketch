@@ -12,7 +12,7 @@ const gridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *
 
 for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 {
-    gridBoxContainerBoxes[i].addEventListener("mouseenter", () => {
+    gridBoxContainerBoxes[i].addEventListener("pointerenter", () => {
         gridBoxContainerBoxes[i].id = "active";
     });
 }
