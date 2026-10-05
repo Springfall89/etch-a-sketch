@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: clamp(0.5rem, 5vw, 1.75rem);
     text-align: center;
 }
 .active
