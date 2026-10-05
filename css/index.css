@@ -40,6 +40,10 @@
     align-items: center;
     gap: 32px;
 }
+.logo-main-text
+{
+    font-size: clamp(1rem, 5vw, 3rem);
+}
 .active
 {
     background-color: #000000;
