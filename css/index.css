@@ -45,6 +45,12 @@
 {
     font-size: clamp(1rem, 5vw, 3rem);
 }
+@media only screen and (max-width: 900px) {
+    .logo-sub-text
+    {
+        display: none;
+    }
+}
 .active
 {
     background-color: #000000;
