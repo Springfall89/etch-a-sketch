@@ -15,7 +15,7 @@ const gridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *
 
 const focusOutText = document.createElement("p");
 focusOutText.classList.add("focus-out-text");
-focusOutText.textContent = "Click on the canvas to draw!";
+focusOutText.textContent = "Click on the screen to draw!";
 
 document.body.setAttribute("style", "padding-top: 0");
 document.body.insertBefore(focusOutText, etchASketch);
