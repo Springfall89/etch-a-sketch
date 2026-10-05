@@ -11,6 +11,10 @@ for (let i = 0; i < 256; i++)
 
 const gridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *");
 
+const focusOutText = document.createElement("p");
+focusOutText.classList.add("focus-out-text");
+focusOutText.textContent = "Click on the canvas to draw!";
+
 for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 {
     let isDrawing = false;
