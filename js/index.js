@@ -1,3 +1,5 @@
+const etchASketch = document.querySelector(".etch-a-sketch");
+
 const gridBoxContainer = document.querySelector(".grid-box-container");
 gridBoxContainer.setAttribute("tabindex", "-1");
 
