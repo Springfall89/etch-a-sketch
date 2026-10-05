@@ -27,6 +27,12 @@
     font-size: clamp(0.5rem, 5vw, 1.75rem);
     text-align: center;
 }
+.bottom
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .active
 {
     background-color: #000000;
