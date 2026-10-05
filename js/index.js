@@ -17,16 +17,24 @@ const focusOutText = document.createElement("p");
 focusOutText.classList.add("focus-out-text");
 focusOutText.textContent = "Click on the canvas to draw!";
 
+document.body.setAttribute("style", "padding-top: 0");
+document.body.insertBefore(focusOutText, etchASketch);
+
 for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 {
     let isDrawing = false;
 
     gridBoxContainer.addEventListener("focusin", () => {
         isDrawing = true;
+        focusOutText.remove();
+        document.body.setAttribute("style", "padding-top: 50px");
     });
 
     gridBoxContainer.addEventListener("focusout", () => {
         isDrawing = false;
+
+        document.body.setAttribute("style", "padding-top: 0");
+        document.body.insertBefore(focusOutText, etchASketch);
     });
 
     gridBoxContainerBoxes[i].addEventListener("pointerenter", () => {
