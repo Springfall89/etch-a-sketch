@@ -334,3 +334,9 @@ knobResize.addEventListener("click", () => {
 });
 
 const modeSelect = document.querySelector("#mode-select");
+let mode = modeSelect.value;
+function updateMode()
+{
+    mode = modeSelect.value;
+}
+modeSelect.addEventListener("change", updateMode);
