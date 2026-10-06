@@ -73,3 +73,25 @@
         display: none;
     }
 }
+.knob
+{
+    aspect-ratio: 1 / 1;
+    width: 100px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 550px) {
+    .knob
+    {
+        width: 75px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .knob
+    {
+        width: 50px;
+    }
+}
