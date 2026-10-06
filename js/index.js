@@ -242,5 +242,80 @@ knobResize.addEventListener("click", () => {
         }
 
         window.addEventListener("beforeunload", warnBeforeUnload);
+
+        const newGridBoxContainerBoxes = document.querySelectorAll(".grid-box-container > *");
+
+        for (let i = 0; i < newGridBoxContainerBoxes.length; i++)
+        {
+            let isDrawing = false;
+            gridBoxContainer.addEventListener("focusin", () => {
+                isDrawing = true;
+                focusOutText.remove();
+                document.body.setAttribute("style", "padding-top: 50px");
+            });
+
+            gridBoxContainer.addEventListener("focusout", () => {
+                isDrawing = false;
+
+                document.body.setAttribute("style", "padding-top: 0");
+                document.body.insertBefore(focusOutText, etchASketch);
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!gridBoxContainer.contains(event.target))
+                {
+                document.body.setAttribute("style", "padding-top: 0");
+                document.body.insertBefore(focusOutText, etchASketch);
+                }
+            });
+
+            newGridBoxContainerBoxes[i].addEventListener("pointerenter", () => {
+                if (!isDrawing)
+                {
+                    return;
+                }
+                newGridBoxContainerBoxes[i].classList.add("active");
+                if (document.querySelector(".active") !== null)
+                {
+                    window.addEventListener("beforeunload", warnBeforeUnload);
+                }
+            });
+
+            gridBoxContainer.addEventListener("pointerdown", (event) => {
+                isDrawing = true;
+
+                focusOutText.remove();
+                document.body.setAttribute("style", "padding-top: 50px");
+
+                gridBoxContainer.setPointerCapture(event.pointerId);
+                
+                if (event.target.classList.contains("grid-box"))
+                {
+                    event.target.classList.add("active");
+                }
+                if (document.querySelector(".active") !== null)
+                {
+                    window.addEventListener("beforeunload", warnBeforeUnload);
+                }
+            });
+
+            gridBoxContainer.addEventListener("pointermove", (event) => {
+
+                if ((event.buttons !== 1) || (!isDrawing))
+                {
+                    return;
+                }
+                const currentBox = document.elementFromPoint(event.clientX, event.clientY);
+
+                if (currentBox && currentBox.classList.contains("grid-box"))
+                {
+                    currentBox.classList.add("active");
+                }
+                if (document.querySelector(".active") !== null)
+                {
+                    window.addEventListener("beforeunload", warnBeforeUnload);
+                }
+            });
+        }
     }
 });
