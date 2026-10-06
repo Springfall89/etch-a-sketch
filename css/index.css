@@ -54,6 +54,10 @@
 {
     font-size: clamp(1rem, 5vw, 3rem);
 }
+.src-text
+{
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
+}
 @media only screen and (max-width: 900px) {
     .logo-sub-text
     {
