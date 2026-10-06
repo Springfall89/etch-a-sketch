@@ -90,6 +90,16 @@ a:hover
 {
     font-size: clamp(1rem, 5vw, 3rem);
 }
+.logo-main-bottom
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    column-gap: 24px;
+    row-gap: 10px;
+    padding: 10px 16px;
+}
 .src-text,
 .knob
 {
