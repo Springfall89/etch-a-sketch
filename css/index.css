@@ -111,3 +111,7 @@
         width: 50px;
     }
 }
+.knob:hover
+{
+    background-color: #e8e8e8;
+}
