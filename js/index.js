@@ -128,6 +128,7 @@ knobReset.addEventListener("click", () => {
         }
         else
         {
+            const gridBoxContainerBoxes = document.querySelectorAll(".active");
             for (let i = 0; i < gridBoxContainerBoxes.length; i++)
             {
                 gridBoxContainerBoxes[i].classList.remove("active");
