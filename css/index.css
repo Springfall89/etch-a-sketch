@@ -101,7 +101,8 @@ a:hover
 }
 .src-text,
 .mode-form,
-.knob
+.knob,
+#mode-select
 {
     font-size: clamp(0.5rem, 3vw, 1.25rem);
 }
@@ -150,4 +151,10 @@ a:hover
 #knob-resize
 {
     font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+}
+#mode-select
+{
+    aspect-ratio: 2 / 1;
+    border-radius: 5px;
+    border-style: none;
 }
