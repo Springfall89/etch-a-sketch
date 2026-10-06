@@ -100,6 +100,7 @@ a:hover
     padding: 10px 24px;
 }
 .src-text,
+.mode-form,
 .knob
 {
     font-size: clamp(0.5rem, 3vw, 1.25rem);
