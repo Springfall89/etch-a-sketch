@@ -1,3 +1,20 @@
+body
+{
+    margin: 0;
+    padding: min(3.125em, 8%);
+    background-color: #E32636;
+    color: #FFD700;
+}
+p,
+a
+{
+    margin: 0;
+    color: #FFD700;
+}
+a:hover
+{
+    text-decoration: none;
+}
 .grid-box-container
 {
     max-height: 85vh;
