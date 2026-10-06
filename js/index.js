@@ -180,3 +180,53 @@ function checkForCorrectSize(num)
         }
     }
 }
+
+knobResize.addEventListener("click", () => {
+    function getSize()
+    {
+        function getWidth()
+        {
+            let width = prompt("Enter your width size: ");
+            if (checkForCorrectSize(width) === null)
+            {
+                return null;
+            }
+            else if (!checkForCorrectSize(width))
+            {
+                getWidth();
+            }
+            else
+            {
+                return width;
+            }
+        }
+
+        function getHeight()
+        {
+            let height = prompt("Enter your height size: ");
+            if (checkForCorrectSize(height) === null)
+            {
+                return null;
+            }
+            else if (!checkForCorrectSize(height))
+            {
+                getHeight();
+            }
+            else
+            {
+                return height;
+            }
+        }
+        let width = getWidth();
+        if (width === null)
+        {
+            return;
+        }
+        let height = getHeight();
+        if (height === null)
+        {
+            return;
+        }
+    }
+    getSize();
+});
