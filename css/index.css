@@ -1,7 +1,7 @@
 body
 {
     margin: 0;
-    padding: min(3.125em, 8%);
+    padding: min(12.5em, 15%);
     background-color: #E32636;
     color: #FFD700;
 }
