@@ -214,5 +214,32 @@ knobResize.addEventListener("click", () => {
         let result = [width, height];
         return result;
     }
-    getSize();
+    let dimensions = getSize();
+    if (dimensions.length !== 2)
+    {
+        return;
+    }
+    else
+    {
+        let width = dimensions[0];
+        let height = dimensions[1];
+
+        gridBoxContainer.replaceChildren();
+
+        const newGridBox = document.createElement("div");
+
+        totalGridBoxes = width * height;
+
+        newGridBox.classList.add("grid-box");
+        newGridBox.style.setProperty("--current-width", `calc(100% / ${width}`);
+
+        knobSizeText.textContent = `${width} x ${height}`;
+
+        for(let i = 0; i < totalGridBoxes; i ++)
+        {
+            gridBoxContainer.appendChild(newGridBox.cloneNode(true));
+        }
+
+        window.addEventListener("beforeunload", warnBeforeUnload);
+    }
 });
