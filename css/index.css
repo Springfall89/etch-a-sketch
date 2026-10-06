@@ -43,6 +43,13 @@
     gap: 32px;
     text-align: center;
 }
+.logo-main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .logo-main-text
 {
     font-size: clamp(1rem, 5vw, 3rem);
