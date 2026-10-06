@@ -110,7 +110,6 @@ let gridBoxWidthSize = Math.floor(currentGridBoxContainerWidth / currentGridBoxW
 let gridBoxHeightSize = totalGridBoxes / gridBoxWidthSize;
 
 const knobSizeText = document.createElement("p");
-knobSizeText.classList.add("knob-size-text");
 knobSizeText.textContent = `${gridBoxWidthSize} x ${gridBoxHeightSize}`;
 
 knobResize.appendChild(knobSizeText);
