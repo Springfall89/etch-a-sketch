@@ -103,11 +103,11 @@ const knobReset = document.querySelector("#knob-reset");
 
 const currentGridBox = gridBoxContainerBoxes[0];
 let totalGridBoxes = gridBoxContainerBoxes.length;
-let currentGridBoxHeight = currentGridBox.getBoundingClientRect().height;
-let currentGridBoxContainerHeight = gridBoxContainer.getBoundingClientRect().height;
+let currentGridBoxWidth = currentGridBox.getBoundingClientRect().width;
+let currentGridBoxContainerWidth = gridBoxContainer.getBoundingClientRect().width;
 
-let gridBoxHeightSize = Math.floor(currentGridBoxContainerHeight / currentGridBoxHeight);
-let gridBoxWidthSize = totalGridBoxes / gridBoxHeightSize;
+let gridBoxWidthSize = Math.floor(currentGridBoxContainerWidth / currentGridBoxWidth);
+let gridBoxHeightSize = totalGridBoxes / gridBoxWidthSize;
 
 const knobSizeText = document.createElement("p");
 knobSizeText.textContent = `${gridBoxWidthSize} x ${gridBoxHeightSize}`;
@@ -232,9 +232,7 @@ knobResize.addEventListener("click", () => {
         totalGridBoxes = width * height;
 
         newGridBox.classList.add("grid-box");
-        newGridBox.style.setProperty("--current-height", `calc(100% / ${height})`);
-
-        gridBoxContainer.style.setProperty("aspect-ratio", `${width} / ${height}`);
+        newGridBox.style.setProperty("--current-width", `calc(100% / ${width})`);
 
         gridBoxContainer.style.setProperty("aspect-ratio", `${width} / ${height}`);
 

@@ -18,9 +18,8 @@ a:hover
 .grid-box-container
 {
     aspect-ratio: 1 / 1;
-    height: 85vh;
+    max-height: 85vh;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
@@ -32,9 +31,9 @@ a:hover
 .grid-box
 {
     aspect-ratio: 1 / 1;
-    --current-height: calc(100% / 16);
-    height: var(--current-height);
-    width: auto;
+    --current-width: calc(100% / 16);
+    width: var(--current-width);
+    height: auto;
     background-color: #ffffff;
     color: #000000;
 }
