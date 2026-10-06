@@ -140,7 +140,11 @@ knobReset.addEventListener("click", () => {
 function checkForCorrectSize(num)
 {
     let convertNum = Number(num);
-    if ((num === null) || (num === "") || (Number.isNaN(convertNum)))
+    if (num === null)
+    {
+        return;
+    }
+    else if ((num === "") || (Number.isNaN(convertNum)))
     {
         alert("Please enter a number.");
         return false;
