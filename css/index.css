@@ -109,6 +109,10 @@
         width: 50px;
     }
 }
+.knob > *
+{
+    color: #000000;
+}
 .knob:hover
 {
     background-color: #e8e8e8;
