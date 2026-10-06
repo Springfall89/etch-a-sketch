@@ -133,8 +133,19 @@ knobReset.addEventListener("click", () => {
             {
                 gridBoxContainerBoxes[i].classList.remove("active");
             }
-            window.removeEventListener("beforeunload", warnBeforeUnload);
         }
+    }
+    const currentGridBox = gridBoxContainerBoxes[0];
+    let totalGridBoxes = gridBoxContainerBoxes.length;
+    let currentGridBoxWidth = currentGridBox.getBoundingClientRect().width;
+    let currentGridBoxContainerWidth = gridBoxContainer.getBoundingClientRect().width;
+
+    let gridBoxWidthSize = Math.floor(currentGridBoxContainerWidth / currentGridBoxWidth);
+    let gridBoxHeightSize = totalGridBoxes / gridBoxWidthSize;
+
+    if ((gridBoxWidthSize === 16) && (gridBoxHeightSize === 16))
+    {
+    window.removeEventListener("beforeunload", warnBeforeUnload);
     }
 });
 
