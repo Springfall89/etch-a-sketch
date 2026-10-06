@@ -5,7 +5,9 @@ body
     background-color: #E32636;
     color: #FFD700;
 }
-p
+p,
+a
 {
     margin: 0;
+    color: #FFD700;
 }
