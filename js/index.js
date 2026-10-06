@@ -236,6 +236,8 @@ knobResize.addEventListener("click", () => {
 
         gridBoxContainer.style.setProperty("aspect-ratio", `${width} / ${height}`);
 
+        gridBoxContainer.style.setProperty("aspect-ratio", `${width} / ${height}`);
+
         knobSizeText.textContent = `${width} x ${height}`;
 
         for(let i = 0; i < totalGridBoxes; i ++)
