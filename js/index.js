@@ -142,7 +142,7 @@ function checkForCorrectSize(num)
     let convertNum = Number(num);
     if (num === null)
     {
-        return;
+        return null;
     }
     else if ((num === "") || (Number.isNaN(convertNum)))
     {
