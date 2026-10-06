@@ -19,6 +19,11 @@
     background-color: #ffffff;
     color: #000000;
 }
+.active
+{
+    background-color: #000000;
+    color: #ffffff;
+}
 .focus-out-text
 {
     height: 50px;
@@ -67,9 +72,4 @@
     {
         display: none;
     }
-}
-.active
-{
-    background-color: #000000;
-    color: #ffffff;
 }
