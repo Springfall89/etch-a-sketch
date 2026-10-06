@@ -146,3 +146,7 @@ a:hover
 {
     background-color: #e8e8e8;
 }
+#knob-resize
+{
+    font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+}
