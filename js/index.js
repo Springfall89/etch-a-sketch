@@ -100,3 +100,17 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
 
 const knobResize = document.querySelector("#knob-resize");
 const knobReset = document.querySelector("#knob-reset");
+
+const currentGridBox = gridBoxContainerBoxes[0];
+let totalGridBoxes = gridBoxContainerBoxes.length;
+let currentGridBoxWidth = currentGridBox.getBoundingClientRect().width;
+let currentGridBoxContainerWidth = gridBoxContainer.getBoundingClientRect().width;
+
+let gridBoxWidthSize = Math.floor(currentGridBoxContainerWidth / currentGridBoxWidth);
+let gridBoxHeightSize = totalGridBoxes / gridBoxWidthSize;
+
+const knobSizeText = document.createElement("p");
+knobSizeText.classList.add("knob-size-text");
+knobSizeText.textContent = `${gridBoxWidthSize} x ${gridBoxHeightSize}`;
+
+knobResize.appendChild(knobSizeText);
