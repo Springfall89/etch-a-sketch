@@ -11,3 +11,7 @@ a
     margin: 0;
     color: #FFD700;
 }
+a:hover
+{
+    text-decoration: none;
+}

@@ -76,10 +76,6 @@
 {
     font-size: clamp(0.5rem, 3vw, 1.25rem);
 }
-.src-text:hover
-{
-    text-decoration: none;
-}
 @media only screen and (max-width: 900px) {
     .logo-sub-text
     {
