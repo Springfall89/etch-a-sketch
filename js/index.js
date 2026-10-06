@@ -97,3 +97,6 @@ for (let i = 0; i < gridBoxContainerBoxes.length; i++)
         }
     });
 }
+
+const knobResize = document.querySelector("#knob-resize");
+const knobReset = document.querySelector("#knob-reset");
