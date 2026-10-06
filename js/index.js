@@ -113,3 +113,14 @@ const knobSizeText = document.createElement("p");
 knobSizeText.textContent = `${gridBoxWidthSize} x ${gridBoxHeightSize}`;
 
 knobResize.appendChild(knobSizeText);
+
+knobReset.addEventListener("click", () => {
+    if (document.querySelector(".active") === null)
+    {
+        return;
+    }
+    else
+    {
+        location.reload();
+    }
+});
