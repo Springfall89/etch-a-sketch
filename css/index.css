@@ -89,7 +89,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: min(0.625em, 8%);
     aspect-ratio: 1 / 1;
     width: 100px;
     height: auto;
