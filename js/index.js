@@ -136,3 +136,43 @@ knobReset.addEventListener("click", () => {
         }
     }
 });
+
+function checkForCorrectSize(num)
+{
+    let convertNum = Number(num);
+    if ((num === null) || (num === "") || (Number.isNaN(convertNum)))
+    {
+        alert("Please enter a number.");
+        return false;
+    }
+    else if (convertNum <= 0)
+    {
+        alert("Value must be above or equal to 1.");
+        return false;
+    }
+    else if (convertNum > 0)
+    {
+        if (!Number.isInteger(convertNum))
+        {
+            alert("Please enter a whole number.");
+            return false;
+        }
+        else if (!Number.isFinite(convertNum))
+        {
+            alert("Please enter a finite number.");
+            return false;
+        }
+        else
+        {
+            if (convertNum > 100)
+            {
+                alert("Value must be below or equal to 100.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+}
