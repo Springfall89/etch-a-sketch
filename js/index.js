@@ -321,3 +321,5 @@ knobResize.addEventListener("click", () => {
         }
     }
 });
+
+const modeSelect = document.querySelector("#mode-select");
