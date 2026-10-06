@@ -121,6 +121,18 @@ knobReset.addEventListener("click", () => {
     }
     else
     {
-        location.reload();
+        let choice = confirm("Do you want to reset the screen?");
+        if (choice === false)
+        {
+            return;
+        }
+        else
+        {
+            for (let i = 0; i < gridBoxContainerBoxes.length; i++)
+            {
+                gridBoxContainerBoxes[i].classList.remove("active");
+            }
+            window.removeEventListener("beforeunload", warnBeforeUnload);
+        }
     }
 });
