@@ -340,5 +340,3 @@ function updateMode()
     mode = modeSelect.value;
 }
 modeSelect.addEventListener("change", updateMode);
-
-const activeGridBox = document.querySelector(".active");
