@@ -14,7 +14,8 @@
 .grid-box
 {
     aspect-ratio: 1 / 1;
-    width: 6.25%;
+    --current-width: calc(100% / 16);
+    width: var(--current-width);
     height: auto;
     background-color: #ffffff;
     color: #000000;
