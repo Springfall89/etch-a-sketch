@@ -184,49 +184,35 @@ function checkForCorrectSize(num)
 knobResize.addEventListener("click", () => {
     function getSize()
     {
-        function getWidth()
+        function getDimensions(label)
         {
-            let width = prompt("Enter your width size: ");
-            if (checkForCorrectSize(width) === null)
+            while (true)
             {
-                return null;
-            }
-            else if (!checkForCorrectSize(width))
-            {
-                getWidth();
-            }
-            else
-            {
-                return width;
-            }
-        }
+                let input = prompt(`Enter your ${label} size: `);
+                let isValid = checkForCorrectSize(input);
 
-        function getHeight()
-        {
-            let height = prompt("Enter your height size: ");
-            if (checkForCorrectSize(height) === null)
-            {
-                return null;
-            }
-            else if (!checkForCorrectSize(height))
-            {
-                getHeight();
-            }
-            else
-            {
-                return height;
+                if (isValid === null)
+                {
+                    return null;
+                }
+                if (isValid)
+                {
+                    return input;
+                }
             }
         }
-        let width = getWidth();
+        let width = getDimensions("width");
         if (width === null)
         {
             return;
         }
-        let height = getHeight();
+        let height = getDimensions("height");
         if (height === null)
         {
             return;
         }
+        let result = [width, height];
+        return result;
     }
     getSize();
 });
