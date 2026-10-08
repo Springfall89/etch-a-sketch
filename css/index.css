@@ -22,3 +22,9 @@ a:hover
     align-items: center;
     gap: 16px;
 }
+.title
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
