@@ -52,3 +52,7 @@ a:hover
         display: none;
     }
 }
+.src-text
+{
+    font-size: clamp(0.5rem, 5vw, 1.25rem);
+}
