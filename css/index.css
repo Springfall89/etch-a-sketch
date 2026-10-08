@@ -75,5 +75,5 @@ button
     background-color: #ffffff;
     color: #000000;
     border-radius: 50%;
-    font-size: clamp(0.5rem, 5vw, 2rem);
+    font-size: clamp(0.5rem, 5vw, 1.75rem);
 }
