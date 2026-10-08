@@ -15,7 +15,8 @@ a:hover
 {
     text-decoration: none;
 }
-button
+button,
+select
 {
     border-style: none;
 }
