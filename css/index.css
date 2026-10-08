@@ -108,3 +108,7 @@ button
     column-gap: 10px;
     font-weight: 900;
 }
+.mode-label
+{
+    font-size: clamp(0.5rem, 5vw, 2rem);
+}
