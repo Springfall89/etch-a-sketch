@@ -46,7 +46,7 @@ a:hover
 {
     font-size: clamp(0.5rem, 7vw, 1.25rem);
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
     .title-sub
     {
         display: none;
