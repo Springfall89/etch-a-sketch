@@ -31,3 +31,11 @@ a:hover
     align-items: center;
     gap: 10px;
 }
+.title-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    font-weight: 900;
+}
