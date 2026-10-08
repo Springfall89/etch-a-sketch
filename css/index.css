@@ -39,3 +39,11 @@ a:hover
     gap: 24px;
     font-weight: 900;
 }
+.title-main
+{
+    font-size: clamp(1rem, 7vw, 3rem);
+}
+.title-sub
+{
+    font-size: clamp(0.5rem, 7vw, 1.25rem);
+}
