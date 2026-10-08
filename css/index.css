@@ -84,7 +84,8 @@ select
     border-radius: 50%;
     font-size: clamp(0.5rem, 5vw, 1.75rem);
 }
-.knob:hover
+.knob:hover,
+.mode-options:hover
 {
     background-color: #f0f0f0;
 }
