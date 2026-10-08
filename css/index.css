@@ -125,3 +125,10 @@ select
     border-radius: 5px;
     font-size: clamp(0.5rem, 5vw, 1.25rem);
 }
+.grid
+{
+    display: flex;
+    flex-wrap: wrap;
+    aspect-ratio: 1 / 1;
+    max-height: 85vh;
+}
