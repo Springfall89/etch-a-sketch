@@ -28,6 +28,13 @@ select
     gap: 16px;
     padding: 10px 50px 50px 50px;
 }
+@media screen and (min-height: 760px)
+{
+    .etch-a-sketch
+    {
+        padding: 50px;
+    }
+}
 .title
 {
     display: flex;
