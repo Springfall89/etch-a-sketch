@@ -89,6 +89,11 @@ select
 {
     background-color: #dedede;
 }
+.knob,
+.mode-options
+{
+    cursor: pointer;
+}
 #knob-resize
 {
     font-size: clamp(0.5rem, 4vw, 1.5rem);
