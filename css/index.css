@@ -63,3 +63,13 @@ a:hover
     align-items: center;
     gap: 24px;
 }
+.knob
+{
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    height: auto;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+}
