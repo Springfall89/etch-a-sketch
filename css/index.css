@@ -88,3 +88,7 @@ button
 {
     background-color: #f0f0f0;
 }
+#knob-resize
+{
+    font-size: clamp(0.5rem, 4vw, 1.5rem);
+}
