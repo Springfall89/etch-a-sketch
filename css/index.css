@@ -87,7 +87,7 @@ select
 .knob:hover,
 .mode-options:hover
 {
-    background-color: #f0f0f0;
+    background-color: #dedede;
 }
 #knob-resize
 {
