@@ -24,6 +24,7 @@ a:hover
 }
 .title
 {
+    padding: 24px 24px 0 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
