@@ -41,7 +41,7 @@ a:hover
 }
 .title-main
 {
-    font-size: clamp(1rem, 7vw, 3rem);
+    font-size: clamp(1rem, 10vw, 3rem);
 }
 .title-sub
 {
