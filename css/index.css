@@ -99,3 +99,12 @@ button
         width: 75px;
     }
 }
+.mode-select
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    font-weight: 900;
+}
