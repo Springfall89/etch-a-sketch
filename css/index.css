@@ -55,6 +55,10 @@ button
     {
         display: none;
     }
+    .knob
+    {
+        width: 75px !important;
+    }
 }
 .src-text
 {
