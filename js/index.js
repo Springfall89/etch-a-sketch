@@ -14,5 +14,5 @@ function generateGrid(width, height)
     }
 }
 
-const modeSelect = document.querySelector(".mode-select");
+const modeSelect = document.querySelector(".mode-options");
 const modeOption = modeSelect.value;
