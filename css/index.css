@@ -121,7 +121,8 @@ select
     column-gap: 16px;
     font-weight: 900;
 }
-.mode-label
+.mode-label,
+.focus-out-text
 {
     font-size: clamp(0.5rem, 5vw, 2rem);
 }
