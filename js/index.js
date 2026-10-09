@@ -24,15 +24,19 @@ modeSelect.addEventListener("change", () => {
     modeOption = modeSelect.value;
 });
 
+const focusOutText = document.createElement("p");
+focusOutText.classList.add("focus-out-text");
+focusOutText.textContent = "Click on the screen to draw!";
 function modifyCell(mode)
 {
     let cells = document.querySelectorAll(grid > "*");
     for (let i = 0; i < cells.length; i++)
     {
         let isDrawing = false;
-        const focusOutText = document.createElement("p");
-        focusOutText.classList.add("focus-out-text");
-        focusOutText.textContent = "Click on the screen to draw!";
+
+        grid.addEventListener("focusout", () => {
+            etchASketch.insertBefore(focusOutText, bottom);
+        });
     }
 }
 
