@@ -32,11 +32,7 @@ function modifyCell(mode)
     let cells = document.querySelectorAll(grid > "*");
     for (let i = 0; i < cells.length; i++)
     {
-        let isDrawing = false;
 
-        grid.addEventListener("focusout", () => {
-            etchASketch.insertBefore(focusOutText, bottom);
-        });
     }
 }
 
