@@ -45,10 +45,13 @@ gridObserver.observe(grid, {
 
 function modifyCell(mode)
 {
-    for (let i = 0; i < cells.length; i++)
+    let i = 0;
+    do
     {
         let isDrawing = false;
+        i++;
     }
+    while (i < cells.length);
 }
 
 function checkMode()
