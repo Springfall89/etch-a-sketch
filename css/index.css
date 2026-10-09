@@ -32,7 +32,7 @@ select
 {
     .etch-a-sketch
     {
-        padding: 50px;
+        padding-top: 50px;
     }
 }
 .title
