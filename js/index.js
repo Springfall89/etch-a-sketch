@@ -28,6 +28,21 @@ const focusOutText = document.createElement("p");
 focusOutText.classList.add("focus-out-text");
 focusOutText.textContent = "Click on the screen to draw!";
 
+let cells = document.querySelectorAll("grid > .grid-cell");
+const gridObserver = new MutationObserver(mutations => {
+    for (let mutation of mutations)
+    {
+        if ((mutation.type === "childList") || (mutation.type === "subtree"))
+        {
+            cells = document.querySelectorAll(".grid > .grid-cell");
+        }
+    }
+});
+gridObserver.observe(grid, {
+    childList: true,
+    subtree: true
+});
+
 function modifyCell(mode)
 {
     let cells = document.querySelectorAll(grid > "*");
