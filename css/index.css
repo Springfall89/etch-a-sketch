@@ -118,7 +118,7 @@ select
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 10px;
+    column-gap: 16px;
     font-weight: 900;
 }
 .mode-label
