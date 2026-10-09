@@ -134,6 +134,7 @@ select
 }
 .grid
 {
+    background-color: #000000;
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 1 / 1;
