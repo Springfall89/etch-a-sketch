@@ -26,7 +26,7 @@ select
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 10px 50px 50px 50px;
+    padding: 10px min(3.125em, 5%) 50px min(3.125em, 5%);
 }
 @media screen and (min-height: 760px)
 {
@@ -76,7 +76,7 @@ select
 {
     box-sizing: border-box;
     width: 100vw;
-    padding: 0 50px;
+    padding: 0 min(3.125em, 5%);
     display: flex;
     justify-content: space-between;
     align-items: center;
