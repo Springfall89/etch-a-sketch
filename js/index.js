@@ -43,11 +43,6 @@ gridObserver.observe(grid, {
     subtree: true
 });
 
-function modifyCell(mode)
-{
-    let i = 0;
-    do
-    {
         let isDrawing = false;
         document.addEventListener("click", (event) => {
             if (!grid.contains(event.target))
@@ -63,6 +58,12 @@ function modifyCell(mode)
                 focusOutText.remove();
             }
         });
+
+function modifyCell(mode)
+{
+    let i = 0;
+    do
+    {
         i++;
     }
     while (i < cells.length);
@@ -83,3 +84,5 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
+generateGrid(16, 16);
+checkMode();
