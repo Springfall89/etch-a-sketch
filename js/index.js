@@ -53,11 +53,13 @@ function modifyCell(mode)
             if (!grid.contains(event.target))
             {
                 isDrawing = false;
+                bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - 53px)");
                 etchASketch.insertBefore(focusOutText, bottom);
             }
             else
             {
                 isDrawing = true;
+                bottom.style.setProperty("padding-top", "min(6.25em, 10%)");
                 focusOutText.remove();
             }
         });
