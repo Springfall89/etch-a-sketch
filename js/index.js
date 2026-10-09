@@ -28,21 +28,6 @@ const focusOutText = document.createElement("p");
 focusOutText.classList.add("focus-out-text");
 focusOutText.textContent = "Click on the screen to draw!";
 
-let cells = document.querySelectorAll("grid > .grid-cell");
-const gridObserver = new MutationObserver(mutations => {
-    for (let mutation of mutations)
-    {
-        if ((mutation.type === "childList") || (mutation.type === "subtree"))
-        {
-            cells = document.querySelectorAll(".grid > .grid-cell");
-        }
-    }
-});
-gridObserver.observe(grid, {
-    childList: true,
-    subtree: true
-});
-
 let isDrawing = false;
 document.addEventListener("click", (event) => {
     if (!grid.contains(event.target))
@@ -61,16 +46,17 @@ document.addEventListener("click", (event) => {
 
 function modifyCell(mode)
 {
-    for (let i = 0; i < cells.length; i++)
+    let cells = document.querySelectorAll(".grid > .grid-cell");
+    for (let cell of cells)
     {
-        cells[i].addEventListener("pointerenter", () => {
+        cell.addEventListener("pointerenter", () => {
             if (!isDrawing)
             {
                 return;
             }
             else
             {
-                cells[i].classList.add(mode);
+                cell.classList.add(mode);
             }
         });
     }
