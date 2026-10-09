@@ -11,7 +11,7 @@ function generateGrid(width, height)
     gridCell.style.setProperty("--width", `calc(100% / ${width})`);
     grid.style.setProperty("aspect-ratio", `${width} / ${height}`);
 
-    for (let i = 0; i< totalCells; i++)
+    for (let i = 0; i < totalCells; i++)
     {
         grid.appendChild(gridCell.cloneNode(true));
     }
