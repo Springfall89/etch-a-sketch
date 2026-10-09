@@ -43,6 +43,16 @@ document.addEventListener("click", (event) => {
         focusOutText.remove();
     }
 });
+grid.addEventListener("focusout", () => {
+        isDrawing = false;
+        bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
+        etchASketch.insertBefore(focusOutText, bottom);
+});
+grid.addEventListener("focusin", () => {
+        isDrawing = true;
+        bottom.style.setProperty("padding-top", "min(6.25em, 10%)");
+        focusOutText.remove();
+});
 
 function modifyCell(mode)
 {
@@ -77,3 +87,5 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
+generateGrid(16, 16);
+checkMode();
