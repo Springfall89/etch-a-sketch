@@ -13,3 +13,6 @@ function generateGrid(width, height)
         grid.appendChild(gridCell.cloneNode(true));
     }
 }
+
+const modeSelect = document.querySelector(".mode-select");
+const modeOption = modeSelect.value;
