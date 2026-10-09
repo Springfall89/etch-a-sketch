@@ -139,6 +139,11 @@ select
     flex-wrap: wrap;
     aspect-ratio: 1 / 1;
     min-height: 75vh;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -ms-touch-action: none;
 }
 .grid-cell
 {
