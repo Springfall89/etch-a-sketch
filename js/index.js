@@ -61,12 +61,10 @@ gridObserver.observe(grid, {
 
 function modifyCell(mode)
 {
-    let i = 0;
-    do
+    for (let i = 0; i < cells.length; i++)
     {
-        i++;
+        
     }
-    while (i < cells.length);
 }
 
 function checkMode()
