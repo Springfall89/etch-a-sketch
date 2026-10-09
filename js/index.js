@@ -49,6 +49,18 @@ function modifyCell(mode)
     do
     {
         let isDrawing = false;
+        document.addEventListener("click", (event) => {
+            if (!grid.contains(event.target))
+            {
+                isDrawing = false;
+                etchASketch.insertBefore(focusOutText, bottom);
+            }
+            else
+            {
+                isDrawing = true;
+                focusOutText.remove();
+            }
+        });
         i++;
     }
     while (i < cells.length);
@@ -69,3 +81,5 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
+generateGrid(16, 16);
+checkMode();
