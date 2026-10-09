@@ -43,27 +43,36 @@ gridObserver.observe(grid, {
     subtree: true
 });
 
-        let isDrawing = false;
-        document.addEventListener("click", (event) => {
-            if (!grid.contains(event.target))
-            {
-                isDrawing = false;
-                bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
-                etchASketch.insertBefore(focusOutText, bottom);
-            }
-            else
-            {
-                isDrawing = true;
-                bottom.style.setProperty("padding-top", "min(6.25em, 10%)");
-                focusOutText.remove();
-            }
-        });
+let isDrawing = false;
+document.addEventListener("click", (event) => {
+    if (!grid.contains(event.target))
+    {
+        isDrawing = false;
+        bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
+        etchASketch.insertBefore(focusOutText, bottom);
+    }
+    else
+    {
+        isDrawing = true;
+        bottom.style.setProperty("padding-top", "min(6.25em, 10%)");
+        focusOutText.remove();
+    }
+});
 
 function modifyCell(mode)
 {
     for (let i = 0; i < cells.length; i++)
     {
-
+        cells[i].addEventListener("pointerenter", () => {
+            if (!isDrawing)
+            {
+                return;
+            }
+            else
+            {
+                cells[i].classList.add(mode);
+            }
+        });
     }
 }
 
