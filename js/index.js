@@ -45,7 +45,6 @@ gridObserver.observe(grid, {
 
 function modifyCell(mode)
 {
-    let cells = document.querySelectorAll(grid > "*");
     for (let i = 0; i < cells.length; i++)
     {
         let isDrawing = false;
