@@ -63,7 +63,7 @@ function modifyCell(mode)
 {
     for (let i = 0; i < cells.length; i++)
     {
-        
+
     }
 }
 
@@ -82,5 +82,3 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
-generateGrid(16, 16);
-checkMode();
