@@ -53,7 +53,7 @@ function modifyCell(mode)
             if (!grid.contains(event.target))
             {
                 isDrawing = false;
-                bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - 53px)");
+                bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
                 etchASketch.insertBefore(focusOutText, bottom);
             }
             else

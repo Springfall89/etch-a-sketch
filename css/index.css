@@ -81,6 +81,7 @@ select
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    --difference: 53px;
 }
 .knob
 {
