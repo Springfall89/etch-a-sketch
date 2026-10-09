@@ -29,3 +29,19 @@ function modifyCell(mode)
         cells[i].classList.add(mode);
     }
 }
+
+function checkMode()
+{
+    if (modeOption === "Normal")
+    {
+        return modifyCell("active");
+    }
+    else if (modeOption === "Darken")
+    {
+        return modifyCell("darken");
+    }
+    else if (modeOption === "RGB")
+    {
+        return modifyCell("rgb");
+    }
+}
