@@ -153,3 +153,10 @@ select
     --width: 6.25%;
     width: var(--width);
 }
+@media screen and (max-height: 760px)
+{
+    .focus-out-text
+    {
+        margin-top: -8px;
+    }
+}
