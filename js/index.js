@@ -83,5 +83,3 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
-generateGrid(16, 16);
-checkMode();
