@@ -160,4 +160,8 @@ select
     {
         margin-top: -8px;
     }
+    .bottom
+    {
+        --difference: 45px;
+    }
 }
