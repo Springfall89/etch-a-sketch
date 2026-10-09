@@ -138,7 +138,7 @@ select
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 1 / 1;
-    max-height: 85vh;
+    min-height: 75vh;
 }
 .grid-cell
 {
