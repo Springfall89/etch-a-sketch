@@ -76,7 +76,7 @@ select
 {
     box-sizing: border-box;
     width: 100%;
-    padding: 0 min(3.125em, 5%);
+    padding: 100px min(3.125em, 5%) 50px min(3.125em, 5%);
     display: flex;
     justify-content: space-between;
     align-items: center;
