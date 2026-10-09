@@ -140,3 +140,10 @@ select
     aspect-ratio: 1 / 1;
     max-height: 85vh;
 }
+.grid-cell
+{
+    background-color: #ffffff;
+    aspect-ratio: 1 / 1;
+    --width: 6.25%;
+    width: var(--width);
+}
