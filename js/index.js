@@ -69,6 +69,24 @@ function modifyCell(mode)
                 cell.classList.add(mode);
             }
         });
+        cell.addEventListener("pointerdown", () => {
+            isDrawing = true;
+            cell.classList.add(mode);
+        });
+        cell.addEventListener("pointermove", (event) => {
+            if ((event.buttons !== 1) || (!isDrawing))
+            {
+                return;
+            }
+            else
+            {
+                let currentCell = document.elementFromPoint(event.clientX, event.clientY);
+                if (currentCell && currentCell.classList.contains("grid-cell"))
+                {
+                    currentCell.classList.add(mode);
+                }
+            }
+        });
     }
 }
 
@@ -87,5 +105,3 @@ function checkMode()
         return modifyCell("rgb");
     }
 }
-generateGrid(16, 16);
-checkMode();
