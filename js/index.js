@@ -70,7 +70,7 @@ function modifyCell(mode)
             {
                 if (mode === "normal")
                 {
-                    cell.classList.add("active");
+                    cell.style.setProperty("background-color", "#000000");;
                 }
                 else if (mode === "rgb")
                 {
@@ -82,7 +82,7 @@ function modifyCell(mode)
             isDrawing = true;
             if (mode === "normal")
             {
-                cell.classList.add("active");
+                cell.style.setProperty("background-color", "#000000");;
             }
             else if (mode === "rgb")
             {
@@ -101,7 +101,7 @@ function modifyCell(mode)
                 {
                     if (mode === "normal")
                     {
-                        currentCell.classList.add("active");
+                        currentCell.style.setProperty("background-color", "#000000");
                     }
                     else if (mode === "rgb")
                     {
