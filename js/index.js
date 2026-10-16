@@ -72,6 +72,10 @@ function modifyCell(mode)
                 {
                     cell.classList.add("active");
                 }
+                else if (mode === "rgb")
+                {
+                    cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                }
             }
         });
         cell.addEventListener("pointerdown", () => {
@@ -79,6 +83,10 @@ function modifyCell(mode)
             if (mode === "normal")
             {
                 cell.classList.add("active");
+            }
+            else if (mode === "rgb")
+            {
+                cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
             }
         });
         cell.addEventListener("pointermove", (event) => {
@@ -95,6 +103,10 @@ function modifyCell(mode)
                     {
                         cell.classList.add("active");
                     }
+                    else if (mode === "rgb")
+                    {
+                        cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                    }
                 }
             }
         });
@@ -103,6 +115,7 @@ function modifyCell(mode)
 
 function checkMode()
 {
+    console.log("Checking Mode...");
     if (modeOption === "Normal")
     {
         return modifyCell("normal");
