@@ -22,6 +22,7 @@ let modeOption = modeSelect.value;
 
 modeSelect.addEventListener("change", () => {
     modeOption = modeSelect.value;
+    checkMode();
 });
 
 const focusOutText = document.querySelector(".focus-out-text");
