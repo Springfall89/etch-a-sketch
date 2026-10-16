@@ -68,7 +68,7 @@ function modifyCell(mode)
             }
             else
             {
-                if (mode === "active")
+                if (mode === "normal")
                 {
                     cell.classList.add("active");
                 }
@@ -76,7 +76,7 @@ function modifyCell(mode)
         });
         cell.addEventListener("pointerdown", () => {
             isDrawing = true;
-            if (mode === "active")
+            if (mode === "normal")
             {
                 cell.classList.add("active");
             }
@@ -91,7 +91,7 @@ function modifyCell(mode)
                 let currentCell = document.elementFromPoint(event.clientX, event.clientY);
                 if (currentCell && currentCell.classList.contains("grid-cell"))
                 {
-                    if (mode === "active")
+                    if (mode === "normal")
                     {
                         cell.classList.add("active");
                     }
@@ -105,7 +105,7 @@ function checkMode()
 {
     if (modeOption === "Normal")
     {
-        return modifyCell("active");
+        return modifyCell("normal");
     }
     else if (modeOption === "Darken")
     {
