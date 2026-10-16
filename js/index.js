@@ -72,14 +72,17 @@ function modifyCell(mode)
             {
                 if (mode === "normal")
                 {
-                    cell.style.setProperty("background-color", "#000000");;
+                    cell.style.removeProperty("opacity");
+                    cell.style.setProperty("background-color", "#000000");
                 }
                 else if (mode === "rgb")
                 {
+                    cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                 }
                 else if (mode === "erase")
                 {
+                    cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#ffffff");
                 }
             }
@@ -88,14 +91,17 @@ function modifyCell(mode)
             isDrawing = true;
             if (mode === "normal")
             {
-                cell.style.setProperty("background-color", "#000000");;
+                cell.style.removeProperty("opacity");
+                cell.style.setProperty("background-color", "#000000");
             }
             else if (mode === "rgb")
             {
+                cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
             }
             else if (mode === "erase")
             {
+                cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#ffffff");
             }
         });
@@ -111,14 +117,17 @@ function modifyCell(mode)
                 {
                     if (mode === "normal")
                     {
+                        cell.style.setProperty("opacity", "100%");
                         currentCell.style.setProperty("background-color", "#000000");
                     }
                     else if (mode === "rgb")
                     {
+                        cell.style.setProperty("opacity", "100%");
                         currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                     }
                     else if (mode === "erase")
                     {
+                        cell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#ffffff");
                     }
                 }
