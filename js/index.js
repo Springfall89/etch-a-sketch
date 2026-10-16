@@ -129,19 +129,19 @@ function modifyCell(mode)
 
 function checkMode()
 {
-    if (modeOption === "Normal")
+    if (modeOption === "normal")
     {
         return modifyCell("normal");
     }
-    else if (modeOption === "Darken")
+    else if (modeOption === "darken")
     {
         return modifyCell("darken");
     }
-    else if (modeOption === "RGB")
+    else if (modeOption === "rgb")
     {
         return modifyCell("rgb");
     }
-    else if (modeOption === "Erase")
+    else if (modeOption === "erase")
     {
         return modifyCell("erase");
     }
