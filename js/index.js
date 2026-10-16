@@ -117,17 +117,17 @@ function modifyCell(mode)
                 {
                     if (mode === "normal")
                     {
-                        cell.style.setProperty("opacity", "100%");
+                        currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#000000");
                     }
                     else if (mode === "rgb")
                     {
-                        cell.style.setProperty("opacity", "100%");
+                        currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                     }
                     else if (mode === "erase")
                     {
-                        cell.style.removeProperty("opacity");
+                        currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#ffffff");
                     }
                 }
