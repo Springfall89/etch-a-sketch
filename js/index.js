@@ -101,11 +101,11 @@ function modifyCell(mode)
                 {
                     if (mode === "normal")
                     {
-                        cell.classList.add("active");
+                        currentCell.classList.add("active");
                     }
                     else if (mode === "rgb")
                     {
-                        cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                        currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                     }
                 }
             }
