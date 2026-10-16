@@ -115,7 +115,6 @@ function modifyCell(mode)
 
 function checkMode()
 {
-    console.log("Checking Mode...");
     if (modeOption === "Normal")
     {
         return modifyCell("normal");
