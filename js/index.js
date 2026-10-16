@@ -24,16 +24,13 @@ modeSelect.addEventListener("change", () => {
     modeOption = modeSelect.value;
 });
 
-const focusOutText = document.createElement("p");
-focusOutText.classList.add("focus-out-text");
-focusOutText.textContent = "Click on the screen to draw!";
+const focusOutText = document.querySelector(".focus-out-text");
 
 let isDrawing = false;
 document.addEventListener("click", (event) => {
     if (!grid.contains(event.target))
     {
         isDrawing = false;
-        bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
         etchASketch.insertBefore(focusOutText, bottom);
     }
     else
@@ -45,9 +42,8 @@ document.addEventListener("click", (event) => {
 });
 grid.addEventListener("focusout", () => {
         isDrawing = false;
-        bottom.style.setProperty("padding-top", "calc(min(6.25em, 10%) - var(--difference)");
         etchASketch.insertBefore(focusOutText, bottom);
-});
+        });
 grid.addEventListener("focusin", () => {
         isDrawing = true;
         bottom.style.setProperty("padding-top", "min(6.25em, 10%)");
