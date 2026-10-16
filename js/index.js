@@ -53,6 +53,11 @@ grid.addEventListener("focusin", () => {
 
 function modifyCell(mode)
 {
+    function getRandomRGBNum()
+    {
+        return Math.floor(Math.random() * 256);
+    }
+
     let cells = document.querySelectorAll(".grid > .grid-cell");
     for (let cell of cells)
     {
