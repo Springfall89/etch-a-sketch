@@ -78,6 +78,10 @@ function modifyCell(mode)
                 {
                     cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                 }
+                else if (mode === "erase")
+                {
+                    cell.style.setProperty("background-color", "#ffffff");
+                }
             }
         });
         cell.addEventListener("pointerdown", () => {
@@ -89,6 +93,10 @@ function modifyCell(mode)
             else if (mode === "rgb")
             {
                 cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+            }
+            else if (mode === "erase")
+            {
+                cell.style.setProperty("background-color", "#ffffff");
             }
         });
         cell.addEventListener("pointermove", (event) => {
@@ -109,6 +117,10 @@ function modifyCell(mode)
                     {
                         currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                     }
+                    else if (mode === "erase")
+                    {
+                        currentCell.style.setProperty("background-color", "#ffffff");
+                    }
                 }
             }
         });
@@ -128,5 +140,9 @@ function checkMode()
     else if (modeOption === "RGB")
     {
         return modifyCell("rgb");
+    }
+    else if (modeOption === "Erase")
+    {
+        return modifyCell("erase");
     }
 }
