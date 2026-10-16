@@ -68,12 +68,18 @@ function modifyCell(mode)
             }
             else
             {
-                cell.classList.add(mode);
+                if (mode === "active")
+                {
+                    cell.classList.add("active");
+                }
             }
         });
         cell.addEventListener("pointerdown", () => {
             isDrawing = true;
-            cell.classList.add(mode);
+            if (mode === "active")
+            {
+                cell.classList.add("active");
+            }
         });
         cell.addEventListener("pointermove", (event) => {
             if ((event.buttons !== 1) || (!isDrawing))
@@ -85,7 +91,10 @@ function modifyCell(mode)
                 let currentCell = document.elementFromPoint(event.clientX, event.clientY);
                 if (currentCell && currentCell.classList.contains("grid-cell"))
                 {
-                    currentCell.classList.add(mode);
+                    if (mode === "active")
+                    {
+                        cell.classList.add("active");
+                    }
                 }
             }
         });
