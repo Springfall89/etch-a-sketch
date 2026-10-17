@@ -84,6 +84,10 @@ function modifyCell()
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#ffffff");
                 }
+                else if (modeOption === "darken")
+                {
+                    cell.style.setProperty("opacity", "90%");
+                }
             }
         });
         cell.addEventListener("pointerdown", () => {
@@ -102,6 +106,10 @@ function modifyCell()
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#ffffff");
+            }
+            else if (modeOption === "darken")
+            {
+                cell.style.setProperty("opacity", "90%");
             }
         });
         cell.addEventListener("pointermove", (event) => {
@@ -128,6 +136,10 @@ function modifyCell()
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#ffffff");
+                    }
+                    else if (modeOption === "darken")
+                    {
+                        cell.style.setProperty("opacity", "90%");
                     }
                 }
             }
