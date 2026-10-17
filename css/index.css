@@ -165,3 +165,9 @@ select
         --difference: 45px;
     }
 }
+.bottom-middle
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
