@@ -52,6 +52,8 @@ grid.addEventListener("focusin", () => {
         focusOutText.remove();
 });
 
+const hoverFlag = document.querySelector("#hover-checkbox");
+
 function modifyCell()
 {
     function getRandomRGBNum()
