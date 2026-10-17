@@ -184,10 +184,10 @@ select
 .hover-text-main
 {
     font-weight: 900;
-    text-align: start !important;
+    text-align: start;
 }
 .hover-text-sub
 {
     font-size: clamp(0.5rem, 3vw, 1rem);
-    text-align: start !important;
+    text-align: start;
 }
