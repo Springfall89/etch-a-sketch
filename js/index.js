@@ -52,7 +52,7 @@ grid.addEventListener("focusin", () => {
         focusOutText.remove();
 });
 
-function modifyCell(mode)
+function modifyCell()
 {
     function getRandomRGBNum()
     {
@@ -69,17 +69,17 @@ function modifyCell(mode)
             }
             else
             {
-                if (mode === "normal")
+                if (modeOption === "normal")
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#000000");
                 }
-                else if (mode === "rgb")
+                else if (modeOption === "rgb")
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                 }
-                else if (mode === "erase")
+                else if (modeOption === "erase")
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#ffffff");
@@ -88,17 +88,17 @@ function modifyCell(mode)
         });
         cell.addEventListener("pointerdown", () => {
             isDrawing = true;
-            if (mode === "normal")
+            if (modeOption === "normal")
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#000000");
             }
-            else if (mode === "rgb")
+            else if (modeOption === "rgb")
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
             }
-            else if (mode === "erase")
+            else if (modeOption === "erase")
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#ffffff");
@@ -114,17 +114,17 @@ function modifyCell(mode)
                 let currentCell = document.elementFromPoint(event.clientX, event.clientY);
                 if (currentCell && currentCell.classList.contains("grid-cell"))
                 {
-                    if (mode === "normal")
+                    if (modeOption === "normal")
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#000000");
                     }
-                    else if (mode === "rgb")
+                    else if (modeOption === "rgb")
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
                     }
-                    else if (mode === "erase")
+                    else if (modeOption === "erase")
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#ffffff");
