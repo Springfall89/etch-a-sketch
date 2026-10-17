@@ -97,7 +97,8 @@ select
     font-size: clamp(0.5rem, 5vw, 1.75rem);
 }
 .knob:hover,
-.mode-options:hover
+.mode-options:hover,
+.hover-checkbox:hover
 {
     background-color: #dedede;
 }
