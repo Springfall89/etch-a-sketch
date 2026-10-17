@@ -179,7 +179,7 @@ select
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: min(1em, 8%);
 }
 .hover-checkbox
 {
