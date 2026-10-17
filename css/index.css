@@ -67,6 +67,10 @@ select
     {
         width: 100px !important;
     }
+    .hover-checkbox
+    {
+        width: 20px !important;
+    }
 }
 .src-text
 {
@@ -112,6 +116,10 @@ select
     .knob
     {
         width: 75px;
+    }
+    .hover-checkbox
+    {
+        width: 15px !important;
     }
 }
 .mode-select
