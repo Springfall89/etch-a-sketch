@@ -124,7 +124,8 @@ select
     font-weight: 900;
 }
 .mode-label,
-.focus-out-text
+.focus-out-text,
+.hover-text-main
 {
     font-size: clamp(0.5rem, 5vw, 2rem);
 }
@@ -177,4 +178,8 @@ select
 {
     display: flex;
     gap: 16px;
+}
+.hover-text-sub
+{
+    font-size: clamp(0.5rem, 3vw, 1rem);
 }
