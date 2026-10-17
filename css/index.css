@@ -98,7 +98,8 @@ select
     background-color: #dedede;
 }
 .knob,
-.mode-options
+.mode-options,
+.hover-checkbox
 {
     cursor: pointer;
 }
