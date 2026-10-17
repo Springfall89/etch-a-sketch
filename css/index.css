@@ -179,6 +179,10 @@ select
     display: flex;
     gap: 16px;
 }
+.hover-text-main
+{
+    font-weight: 900;
+}
 .hover-text-sub
 {
     font-size: clamp(0.5rem, 3vw, 1rem);
