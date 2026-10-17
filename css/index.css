@@ -188,6 +188,7 @@ select
 }
 .hover-text-sub
 {
+    display: none;
     font-size: clamp(0.5rem, 3vw, 1rem);
     text-align: start;
 }
