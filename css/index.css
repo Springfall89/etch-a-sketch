@@ -133,7 +133,7 @@ select
 }
 .mode-label,
 .focus-out-text,
-.hover-text-main
+.hover-text
 {
     font-size: clamp(0.5rem, 5vw, 2rem);
 }
@@ -195,14 +195,8 @@ select
     border-radius: 10px;
     width: 25px;
 }
-.hover-text-main
+.hover-text
 {
     font-weight: 900;
-    text-align: start;
-}
-.hover-text-sub
-{
-    display: none;
-    font-size: clamp(0.5rem, 3vw, 1rem);
     text-align: start;
 }
