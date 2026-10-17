@@ -153,5 +153,3 @@ function modifyCell()
         });
     }
 }
-generateGrid(16, 16);
-modifyCell();
