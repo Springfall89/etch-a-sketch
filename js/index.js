@@ -22,7 +22,6 @@ let modeOption = modeSelect.value;
 
 modeSelect.addEventListener("change", () => {
     modeOption = modeSelect.value;
-    checkMode();
 });
 
 const focusOutText = document.querySelector(".focus-out-text");
@@ -133,25 +132,5 @@ function modifyCell(mode)
                 }
             }
         });
-    }
-}
-
-function checkMode()
-{
-    if (modeOption === "normal")
-    {
-        return modifyCell("normal");
-    }
-    else if (modeOption === "darken")
-    {
-        return modifyCell("darken");
-    }
-    else if (modeOption === "rgb")
-    {
-        return modifyCell("rgb");
-    }
-    else if (modeOption === "erase")
-    {
-        return modifyCell("erase");
     }
 }
