@@ -171,3 +171,8 @@ select
     flex-direction: column;
     flex-wrap: wrap;
 }
+.hover-flag
+{
+    display: flex;
+    gap: 16px;
+}
