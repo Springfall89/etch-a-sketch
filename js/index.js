@@ -131,7 +131,7 @@ function modifyCell()
                 }
                 else if (modeOption === "darken")
                 {
-                    cell.style.setProperty("opacity", "90%");
+                    darkenCell();
                 }
             }
         });
@@ -154,7 +154,7 @@ function modifyCell()
             }
             else if (modeOption === "darken")
             {
-                cell.style.setProperty("opacity", "90%");
+                darkenCell();
             }
         });
         cell.addEventListener("pointermove", (event) => {
@@ -184,7 +184,7 @@ function modifyCell()
                     }
                     else if (modeOption === "darken")
                     {
-                        cell.style.setProperty("opacity", "90%");
+                        darkenCell();
                     }
                 }
             }
