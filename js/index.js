@@ -71,7 +71,8 @@ function modifyCell()
             cell.style.setProperty("opacity", newCellOpacity);
         }
 
-        cell.addEventListener("pointerenter", () => {
+        function setHover()
+        {
             if (!isDrawing)
             {
                 return;
@@ -98,7 +99,20 @@ function modifyCell()
                     darkenCell();
                 }
             }
+        }
+
+        hoverFlag.addEventListener("change", (event) => {
+            event.preventDefault();
+            if (!hoverFlag.checked)
+            {
+                cell.removeEventListener("pointerenter", setHover);
+            }
+            else
+            {
+                cell.addEventListener("pointerenter", setHover);
+            }
         });
+
         cell.addEventListener("pointerdown", () => {
             isDrawing = true;
             if (modeOption === "normal")
