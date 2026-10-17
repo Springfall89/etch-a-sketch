@@ -64,47 +64,9 @@ function modifyCell()
     {
         function darkenCell()
         {
-            let cellOpacity = window.getComputedStyle(cell).opacity;
-            if (cellOpacity === "100%")
-            {
-                cell.style.setProperty("opacity", "90%");
-            }
-            else if (cellOpacity === "90%")
-            {
-                cell.style.setProperty("opacity", "80%");
-            }
-            else if (cellOpacity === "80%")
-            {
-                cell.style.setProperty("opacity", "70%");
-            }
-            else if (cellOpacity === "70%")
-            {
-                cell.style.setProperty("opacity", "60%");
-            }
-            else if (cellOpacity === "60%")
-            {
-                cell.style.setProperty("opacity", "50%");
-            }
-            else if (cellOpacity === "50%")
-            {
-                cell.style.setProperty("opacity", "40%");
-            }
-            else if (cellOpacity === "40%")
-            {
-                cell.style.setProperty("opacity", "30%");
-            }
-            else if (cellOpacity === "30%")
-            {
-                cell.style.setProperty("opacity", "20%");
-            }
-            else if (cellOpacity === "20%")
-            {
-                cell.style.setProperty("opacity", "10%");
-            }
-            else if (cellOpacity === "10%")
-            {
-                cell.style.setProperty("opacity", "0");
-            }
+            let cellOpacity = Number(window.getComputedStyle(cell).opacity);
+            let newCellOpacity = String(cellOpacity - 0.1);
+            cell.style.setProperty("opacity", newCellOpacity);
         }
 
         cell.addEventListener("pointerenter", () => {
@@ -191,3 +153,5 @@ function modifyCell()
         });
     }
 }
+generateGrid(16, 16);
+modifyCell();
