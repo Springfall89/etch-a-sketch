@@ -75,6 +75,12 @@ input
     {
         width: 20px !important;
     }
+    .hover-checkbox:checked::before
+    {
+        width: 4.8px !important;
+        height: 12.8px !important;
+        border-width: 0 3.2px 3.2px 0 !important;
+    }
 }
 .src-text
 {
@@ -125,6 +131,12 @@ input
     .hover-checkbox
     {
         width: 15px !important;
+    }
+    .hover-checkbox:checked::before
+    {
+        width: 3.6px !important;
+        height: 9.6px !important;
+        border-width: 0 2.4px 2.4px 0 !important;
     }
 }
 .mode-select
