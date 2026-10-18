@@ -262,7 +262,7 @@ function getDimensions(dimension)
         }
         if (isValid)
         {
-            return input;
+            return Number(input);
         }
     }
 }
