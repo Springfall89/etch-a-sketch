@@ -317,6 +317,7 @@ knobResize.addEventListener("click", () => {
     removeGridCells();
     generateGrid(width, height);
     modifyCell();
+    return;
 });
 
 knobReset.addEventListener("click", () => {
