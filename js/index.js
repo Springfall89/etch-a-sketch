@@ -318,3 +318,20 @@ knobResize.addEventListener("click", () => {
     generateGrid(width, height);
     modifyCell();
 });
+
+knobReset.addEventListener("click", () => {
+    let choice = confirm("Do you want to reset the screen?");
+    if (choice)
+    {
+        resetGrid();
+        if ((width === 16) && (height === 16))
+        {
+            window.removeEventListener("beforeunload", warnBeforeUnload);
+        }
+        return;
+    }
+    else
+    {
+        return;
+    }
+});
