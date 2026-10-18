@@ -268,4 +268,17 @@ function getSizes()
             }
         }
     }
+
+    let width = getDimensions("width");
+    if (width === null)
+    {
+        return null;
+    }
+    let height = getDimensions("height");
+    if (height === null)
+    {
+        return null;
+    }
+    let result = [width, height];
+    return result;
 }
