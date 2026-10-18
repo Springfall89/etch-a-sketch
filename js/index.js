@@ -235,7 +235,7 @@ function checkForValidInput(input)
             }
             else
             {
-                if ((num < 0) || (100 < num))
+                if ((num <= 0) || (100 < num))
                 {
                     alert("Number must be between 1 and 100.");
                     return false;
