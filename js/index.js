@@ -203,3 +203,6 @@ function modifyCell()
         });
     }
 }
+
+let width = 16;
+let height = 16;
