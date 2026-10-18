@@ -244,3 +244,21 @@ function checkForValidInput(input)
         }
     }
 }
+
+function getDimensions(dimension)
+{
+    while (true)
+    {
+        let input = prompt(`Enter your new ${dimension} size: `);
+        let isValid = checkForValidInput(input);
+
+        if (input === null)
+        {
+            return null;
+        }
+        if (isValid)
+        {
+            return input;
+        }
+    }
+}
