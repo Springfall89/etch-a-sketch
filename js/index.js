@@ -5,6 +5,9 @@ const grid = document.querySelector(".grid");
 const gridCell = document.createElement("div");
 gridCell.classList.add("grid-cell");
 
+const knobResize = document.querySelector("#knob-resize");
+const knobReset = document.querySelector("#knob-reset");
+
 function generateGrid(width, height)
 {
     let totalCells = width * height;
