@@ -36,6 +36,11 @@ function generateGrid(width, height)
     }
 }
 
+function removeGridCells()
+{
+    grid.replaceChildren();
+}
+
 const modeSelect = document.querySelector("#mode-options");
 let modeOption = modeSelect.value;
 
