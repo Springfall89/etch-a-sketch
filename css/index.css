@@ -131,6 +131,7 @@ input
     .hover-checkbox
     {
         width: 15px !important;
+        border-radius: 3px !important;
     }
     .hover-checkbox:checked::before
     {
