@@ -336,3 +336,6 @@ knobReset.addEventListener("click", () => {
         return;
     }
 });
+
+generateGrid(width, height);
+modifyCell();
