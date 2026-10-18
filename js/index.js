@@ -17,6 +17,15 @@ function generateGrid(width, height)
 {
     knobResize.textContent = `Resize ${width}x${height}`;
 
+    if ((width === 16) && (height === 16))
+    {
+        window.removeEventListener("beforeunload", warnBeforeUnload);
+    }
+    else
+    {
+        window.addEventListener("beforeunload", warnBeforeUnload);
+    }
+
     let totalCells = width * height;
     gridCell.style.setProperty("--width", `calc(100% / ${width})`);
     grid.style.setProperty("aspect-ratio", `${width} / ${height}`);
