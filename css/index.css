@@ -20,6 +20,10 @@ select
 {
     border-style: none;
 }
+button
+{
+    padding: 0;
+}
 input
 {
     margin: 0;
