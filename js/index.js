@@ -41,6 +41,16 @@ function removeGridCells()
     grid.replaceChildren();
 }
 
+function resetGrid()
+{
+    let cells = document.querySelectorAll(".grid > .grid-cell");
+    for (let cell of cells)
+    {
+        cell.style.removeProperty("opacity");
+        cell.style.setProperty("background-color", "#ffffff");
+    }
+}
+
 const modeSelect = document.querySelector("#mode-options");
 let modeOption = modeSelect.value;
 
