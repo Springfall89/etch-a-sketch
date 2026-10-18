@@ -283,4 +283,11 @@ knobResize.addEventListener("click", () => {
         let result = [width, height];
         return result;
     }
+    let dimensions = getSizes();
+    width = dimensions[0];
+    height = dimensions[1];
+
+    removeGridCells();
+    generateGrid(width, height);
+    modifyCell();
 });
