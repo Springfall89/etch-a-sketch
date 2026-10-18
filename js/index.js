@@ -206,3 +206,41 @@ function modifyCell()
 
 let width = 16;
 let height = 16;
+
+function checkForValidInput(input)
+{
+    let num = Number(input);
+    if (num === NaN)
+    {
+        alert("Please enter a number.");
+        return false;
+    }
+    else
+    {
+        if (!Number.isInteger(num))
+        {
+            alert("Please enter a whole number.");
+            return false;
+        }
+        else
+        {
+            if (!Number.isFinite(num))
+            {
+                alert("Please enter a finite number.");
+                return false;
+            }
+            else
+            {
+                if ((num < 0) || (100 < num))
+                {
+                    alert("Number must be between 1 and 100.");
+                    return false;
+                }
+                else
+                {
+                    return num;
+                }
+            }
+        }
+    }
+}
