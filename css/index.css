@@ -229,5 +229,6 @@ input
 }
 .hover-text
 {
+    text-align: start;
     font-weight: 900;
 }
