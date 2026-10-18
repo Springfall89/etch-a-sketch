@@ -10,6 +10,8 @@ const knobReset = document.querySelector("#knob-reset");
 
 function generateGrid(width, height)
 {
+    knobResize.textContent = `Resize ${width}x${height}`;
+
     let totalCells = width * height;
     gridCell.style.setProperty("--width", `calc(100% / ${width})`);
     grid.style.setProperty("aspect-ratio", `${width} / ${height}`);
