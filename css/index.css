@@ -71,6 +71,10 @@ input
     {
         width: 100px !important;
     }
+    .hover-flag
+    {
+        width: 200px !important;
+    }
     .hover-checkbox
     {
         width: 20px !important;
@@ -127,6 +131,10 @@ input
     .knob
     {
         width: 75px;
+    }
+    .hover-flag
+    {
+        width: 100px !important;
     }
     .hover-checkbox
     {
@@ -206,6 +214,7 @@ input
     justify-content: center;
     align-items: center;
     gap: min(1em, 8%);
+    width: 300px;
 }
 .hover-checkbox
 {
