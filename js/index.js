@@ -135,20 +135,24 @@ function modifyCell()
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#000000");
+                    addRefreshWarning();
                 }
                 else if (modeOption === "rgb")
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                    addRefreshWarning();
                 }
                 else if (modeOption === "erase")
                 {
                     cell.style.removeProperty("opacity");
                     cell.style.setProperty("background-color", "#ffffff");
+                    addRefreshWarning();
                 }
                 else if (modeOption === "darken")
                 {
                     darkenCell();
+                    addRefreshWarning();
                 }
             }
         }
@@ -171,20 +175,24 @@ function modifyCell()
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#000000");
+                addRefreshWarning();
             }
             else if (modeOption === "rgb")
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                addRefreshWarning();
             }
             else if (modeOption === "erase")
             {
                 cell.style.removeProperty("opacity");
                 cell.style.setProperty("background-color", "#ffffff");
+                addRefreshWarning();
             }
             else if (modeOption === "darken")
             {
                 darkenCell();
+                addRefreshWarning();
             }
         });
         cell.addEventListener("pointermove", (event) => {
@@ -201,20 +209,24 @@ function modifyCell()
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#000000");
+                        addRefreshWarning();
                     }
                     else if (modeOption === "rgb")
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", `rgb(${getRandomRGBNum()} ${getRandomRGBNum()} ${getRandomRGBNum()})`);
+                        addRefreshWarning();
                     }
                     else if (modeOption === "erase")
                     {
                         currentCell.style.removeProperty("opacity");
                         currentCell.style.setProperty("background-color", "#ffffff");
+                        addRefreshWarning();
                     }
                     else if (modeOption === "darken")
                     {
                         darkenCell();
+                        addRefreshWarning();
                     }
                 }
             }
