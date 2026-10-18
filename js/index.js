@@ -8,6 +8,11 @@ gridCell.classList.add("grid-cell");
 const knobResize = document.querySelector("#knob-resize");
 const knobReset = document.querySelector("#knob-reset");
 
+function warnBeforeUnload(event)
+{
+    event.preventDefault();
+}
+
 function generateGrid(width, height)
 {
     knobResize.textContent = `Resize ${width}x${height}`;
