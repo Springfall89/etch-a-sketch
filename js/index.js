@@ -101,6 +101,21 @@ function modifyCell()
     let cells = document.querySelectorAll(".grid > .grid-cell");
     for (let cell of cells)
     {
+        function addRefreshWarning()
+        {
+            if ((Number(window.getComputedStyle(cell).opacity < 1)) || (window.getComputedStyle(cell).backgroundColor !== "rgb(255, 255, 255)"))
+            {
+                window.addEventListener("beforeunload", warnBeforeUnload);
+            }
+            else
+            {
+                if ((width === 16) && (height === 16))
+                {
+                    window.removeEventListener("beforeunload", warnBeforeUnload);
+                }
+            }
+        }
+
         function darkenCell()
         {
             let cellOpacity = Number(window.getComputedStyle(cell).opacity);
@@ -204,17 +219,6 @@ function modifyCell()
                 }
             }
         });
-        if ((Number(window.getComputedStyle(cell).opacity < 1)) || (window.getComputedStyle(cell).backgroundColor !== "rgb(255, 255, 255)"))
-        {
-            window.addEventListener("beforeunload", warnBeforeUnload);
-        }
-        else
-        {
-            if ((width === 16) && (height === 16))
-            {
-                window.removeEventListener("beforeunload", warnBeforeUnload);
-            }
-        }
     }
 }
 
