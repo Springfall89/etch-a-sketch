@@ -88,6 +88,9 @@ grid.addEventListener("focusin", () => {
 
 const hoverFlag = document.querySelector("#hover-checkbox");
 
+let width = 16;
+let height = 16;
+
 function modifyCell()
 {
     function getRandomRGBNum()
@@ -203,9 +206,6 @@ function modifyCell()
         });
     }
 }
-
-let width = 16;
-let height = 16;
 
 knobResize.addEventListener("click", () => {
     function getSizes()
