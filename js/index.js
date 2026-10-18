@@ -210,7 +210,7 @@ let height = 16;
 function checkForValidInput(input)
 {
     let num = Number(input);
-    if (num === NaN)
+    if ((input === "") || (Number.isNaN(num)))
     {
         alert("Please enter a number.");
         return false;
