@@ -207,78 +207,80 @@ function modifyCell()
 let width = 16;
 let height = 16;
 
-function getSizes()
-{
-    function checkForValidInput(input)
+knobResize.addEventListener("click", () => {
+    function getSizes()
     {
-        let num = Number(input);
-        if (input === null)
+        function checkForValidInput(input)
         {
-            return null;
-        }
-        else if ((input === "") || (Number.isNaN(num)))
-        {
-            alert("Please enter a number.");
-            return false;
-        }
-        else
-        {
-            if (!Number.isInteger(num))
-            {
-                alert("Please enter a whole number.");
-                return false;
-            }
-            else
-            {
-                if (!Number.isFinite(num))
-                {
-                    alert("Please enter a finite number.");
-                    return false;
-                }
-                else
-                {
-                    if ((num <= 0) || (100 < num))
-                    {
-                        alert("Number must be between 1 and 100.");
-                        return false;
-                    }
-                    else
-                    {
-                        return num;
-                    }
-                }
-            }
-        }
-    }
-
-    function getDimensions(dimension)
-    {
-        while (true)
-        {
-            let input = prompt(`Enter your new ${dimension} size: `);
-            let isValid = checkForValidInput(input);
-
+            let num = Number(input);
             if (input === null)
             {
                 return null;
             }
-            if (isValid)
+            else if ((input === "") || (Number.isNaN(num)))
             {
-                return Number(input);
+                alert("Please enter a number.");
+                return false;
+            }
+            else
+            {
+                if (!Number.isInteger(num))
+                {
+                    alert("Please enter a whole number.");
+                    return false;
+                }
+                else
+                {
+                    if (!Number.isFinite(num))
+                    {
+                        alert("Please enter a finite number.");
+                        return false;
+                    }
+                    else
+                    {
+                        if ((num <= 0) || (100 < num))
+                        {
+                            alert("Number must be between 1 and 100.");
+                            return false;
+                        }
+                        else
+                        {
+                            return num;
+                        }
+                    }
+                }
             }
         }
-    }
 
-    let width = getDimensions("width");
-    if (width === null)
-    {
-        return null;
+        function getDimensions(dimension)
+        {
+            while (true)
+            {
+                let input = prompt(`Enter your new ${dimension} size: `);
+                let isValid = checkForValidInput(input);
+
+                if (input === null)
+                {
+                    return null;
+                }
+                if (isValid)
+                {
+                    return Number(input);
+                }
+            }
+        }
+
+        let width = getDimensions("width");
+        if (width === null)
+        {
+            return null;
+        }
+        let height = getDimensions("height");
+        if (height === null)
+        {
+            return null;
+        }
+        let result = [width, height];
+        return result;
     }
-    let height = getDimensions("height");
-    if (height === null)
-    {
-        return null;
-    }
-    let result = [width, height];
-    return result;
-}
+});
