@@ -139,7 +139,7 @@ input
     }
     .hover-flag
     {
-        width: 100px !important;
+        width: 150px !important;
     }
     .hover-checkbox
     {
@@ -245,4 +245,23 @@ input
 {
     text-align: start;
     font-weight: 900;
+}
+@media screen and (max-width: 360px)
+{
+    .hover-flag
+    {
+        width: 100px !important;
+    }
+    .hover-checkbox
+    {
+        min-width: 10px !important;
+        border-radius: 3px !important;
+        padding-top: 2px;
+    }
+    .hover-checkbox:checked::before
+    {
+        width: 2.4px !important;
+        height: 6.4px !important;
+        border-width: 0 1.6px 1.6px 0 !important;
+    }
 }
