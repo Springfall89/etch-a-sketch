@@ -6,6 +6,7 @@ const gridCell = document.createElement("div");
 gridCell.classList.add("grid-cell");
 
 const knobResize = document.querySelector("#knob-resize");
+    const knobResizeSizeText = document.querySelector("#knob-resize-size-text");
 const knobReset = document.querySelector("#knob-reset");
 
 function warnBeforeUnload(event)
@@ -15,7 +16,7 @@ function warnBeforeUnload(event)
 
 function generateGrid(width, height)
 {
-    knobResize.textContent = `Resize ${width}x${height}`;
+    knobResizeSizeText.textContent = `${width}x${height}`;
 
     if ((width === 16) && (height === 16))
     {
