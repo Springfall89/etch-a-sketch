@@ -16,7 +16,7 @@ function warnBeforeUnload(event)
 
 function generateGrid(width, height)
 {
-    knobResizeSizeText.textContent = `${width}x${height}`;
+    knobResizeSizeText.textContent = `${width} x ${height}`;
 
     if ((width === 16) && (height === 16))
     {
