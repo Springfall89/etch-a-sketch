@@ -115,6 +115,10 @@ input
     font-size: clamp(0.5rem, 5vw, 1.75rem);
     line-height: clamp(1em, 5vw, 1.5em);
 }
+.knob > *
+{
+    color: #000000;
+}
 .knob:hover,
 .mode-options:hover,
 .hover-checkbox:hover
