@@ -1,5 +1,5 @@
 # Live Website
-**View the live website at https://springfall89.github.io/etch-a-sketch**
+**View the live website at https://springfall89.github.io/odin-etch-a-sketch**
 # Etch A Sketch
 This website **tries** to recreate the popular drawing toy, [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch). While it may not be accurate, this is just made as a project to follow the Odin Project curriculum, so don't take it too seriously.
 # Credits
